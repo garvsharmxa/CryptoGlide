@@ -26,9 +26,16 @@ CryptoGlide is a Flutter-based mobile application that provides real-time crypto
 
 ## Screenshots
 
-![Simulator Screenshot - Iphone 16 - 2025-03-30 at 22.55.51.png](../../Desktop/Simulator%20Screenshot%20-%20Iphone%2016%20-%202025-03-30%20at%2022.55.51.png)
-![Simulator Screenshot - Iphone 16 - 2025-03-30 at 22.55.46.png](../../Desktop/Simulator%20Screenshot%20-%20Iphone%2016%20-%202025-03-30%20at%2022.55.46.png)
-![Simulator Screenshot - Iphone 16 - 2025-03-30 at 22.55.42.png](../../Desktop/Simulator%20Screenshot%20-%20Iphone%2016%20-%202025-03-30%20at%2022.55.42.png)
+![Simulator Screenshot - Iphone 16 - 2025-03-30 at 22 55 42](https://github.com/user-attachments/assets/3601edf3-c973-4ac5-a923-a1ba5809a626)
+
+![Simulator Screenshot - Iphone 16 - 2025-03-30 at 22 55 51](https://github.com/user-attachments/assets/d9cb8d13-7ccd-40d2-be49-e627659365a3)
+
+![Simulator Screenshot - Iphone 16 - 2025-03-30 at 22 55 46](https://github.com/user-attachments/assets/ec3d1a99-90aa-4a3d-aa96-025b242f459a)
+
+![Simulator Screenshot - Iphone 16 - 2025-03-30 at 23 04 56](https://github.com/user-attachments/assets/18f8a6f3-d293-4371-a3ae-e555546dc04d)
+
+
+
 
 ## Architecture
 
