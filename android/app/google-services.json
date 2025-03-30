@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "995111976149",
+    "project_id": "crypto-35b47",
+    "storage_bucket": "crypto-35b47.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995111976149:android:e172ee4c0db0b5665b365c",
+        "android_client_info": {
+          "package_name": "com.example.cryptoglide"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4PsqhiaaAt9AUFaCbfZWypKJTo_ir7Vg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
