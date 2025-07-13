@@ -26,11 +26,21 @@
   Built using Provider for state management. Easily add new coins, widgets, or features.
 
 ## Screenshots
+<div align="left">
 
-<img src="assets/screenshots/market_dark.png" width="320"/>
-<img src="assets/screenshots/portfolio_light.png" width="320"/>
-<img src="assets/screenshots/details_chart.png" width="320"/>
-<img src="assets/screenshots/settings.png" width="320"/>
+<img src="https://github.com/user-attachments/assets/99704316-2fa3-4f2c-8668-110dbebf5a78" width="320" alt="CryptoGlide Market Dark"/>
+<img src="https://github.com/user-attachments/assets/35fce97b-b2e4-4f21-b7c4-5c7e07400b6c" width="320" alt="CryptoGlide Market Light"/>
+<img src="https://github.com/user-attachments/assets/82dd41ed-989a-4dd6-9f99-3d61d6b34ca8" width="320" alt="Portfolio Screen"/>
+<img src="https://github.com/user-attachments/assets/4f986a32-31c6-435c-bda0-fe960a9a0a85" width="320" alt="Crypto Details"/>
+<img src="https://github.com/user-attachments/assets/727f7ca2-e5f9-4f55-b2fd-82021183552b" width="320" alt="Crypto Details Chart"/>
+<img src="https://github.com/user-attachments/assets/5047153b-0023-4757-a624-644f3e49e59d" width="320" alt="Settings Screen"/>
+<img src="https://github.com/user-attachments/assets/9c0a52db-9156-4f3a-a19b-36c1817af024" width="320" alt="Portfolio Light"/>
+<img src="https://github.com/user-attachments/assets/783c41ba-48e1-4f93-890f-f5d2ebde4a47" width="320" alt="Portfolio Dark"/>
+
+</div>
+
+
+
 
 ## Getting Started
 
