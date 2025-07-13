@@ -1,162 +1,114 @@
-# CryptoGlide - Real-Time Cryptocurrency Tracker
+# CryptoGlide
 
-CryptoGlide is a Flutter-based mobile application that provides real-time cryptocurrency price tracking using WebSockets. The app features dynamic price updates, interactive charts with customizable time periods, and a clean, intuitive user interface.
+**CryptoGlide** is a modern, real-time cryptocurrency portfolio and market tracking app built with Flutter. It features real-time price updates via Binance WebSocket, beautiful UI/UX with dark mode support, detailed crypto analytics and charts, portfolio management, and customizable settings.
 
 ## Features
 
-### Real-Time Cryptocurrency Tracking
-- Live price updates via Binance WebSocket API
-- Supports multiple cryptocurrencies including BTC, ETH, BNB, SOL, XRP, ADA, DOGE, MATIC
-- Instant price change indicators with visual feedback
+- **Live Market Tracker:**  
+  View trending, top, and favorite cryptocurrencies with real-time prices, percentage changes, and color-coded indicators.
 
-### Interactive Price Charts
-- Interactive line charts using fl_chart
-- Multiple time period options (1H, 1D, 1W, 1M, 6M, 1Y)
-- Smooth animations and responsive UI
+- **Portfolio Management:**  
+  Track your top crypto holdings, view total balance and performance, and see detailed stats for each holding.
 
-### Portfolio Management
-- Track your crypto holdings in one place
-- View total balance and individual asset performance
-- Real-time updates on portfolio value
+- **Crypto Details:**  
+  Tap any coin for animated details including live price, interactive charts (powered by fl_chart), supply/cap stats, all-time high/low, and external links.
 
-### Clean and Modern UI
-- Dark and light theme support
-- Responsive design for different screen sizes
-- Smooth animations and transitions
+- **Real-Time Data:**  
+  Prices, charts, and stats update live using Binance WebSocket and CoinGecko API.
+
+- **Beautiful UI:**  
+  Animated cards, custom gradients, icons, and smooth transitions. Full support for both light and dark themes.
+
+- **Settings:**  
+  Toggle notifications, enable two-factor authentication, manage wallets, and more—all from a unified settings page.
+
+- **Extensible:**  
+  Built using Provider for state management. Easily add new coins, widgets, or features.
 
 ## Screenshots
 
-![Simulator Screenshot - Iphone 16 - 2025-03-30 at 22 55 42](https://github.com/user-attachments/assets/3601edf3-c973-4ac5-a923-a1ba5809a626)
-
-![Simulator Screenshot - Iphone 16 - 2025-03-30 at 22 55 51](https://github.com/user-attachments/assets/d9cb8d13-7ccd-40d2-be49-e627659365a3)
-
-![Simulator Screenshot - Iphone 16 - 2025-03-30 at 22 55 46](https://github.com/user-attachments/assets/ec3d1a99-90aa-4a3d-aa96-025b242f459a)
-
-![Simulator Screenshot - Iphone 16 - 2025-03-30 at 23 04 56](https://github.com/user-attachments/assets/18f8a6f3-d293-4371-a3ae-e555546dc04d)
-
-
-
-
-## Architecture
-
-CryptoGlide follows a clean architecture approach with:
-
-- **Provider Pattern** for state management
-- **WebSocket Services** for real-time data
-- **Repository Pattern** for data handling
-
-### Project Structure
-
-```
-lib/
-├── features/
-│   ├── crypto/
-│   │   ├── crypto_tracker_screen.dart
-│   │   └── crypto_details_screen.dart
-│   ├── portfolio/
-│   │   └── portfolio_screen.dart
-│   └── settings/
-│       └── setting_screen.dart
-├── providers/
-│   ├── crypto_provider.dart
-│   └── portfolio_provider.dart
-├── services/
-│   ├── crypto_api_service.dart
-│   └── websocket_service.dart
-├── widgets/
-│   └── bottom_nav_bar.dart
-└── main.dart
-```
-
-## APIs Used
-
-- **Binance WebSocket API** - For real-time cryptocurrency price data
-- **CoinGecko API** - For historical price data and cryptocurrency details
+<img src="assets/screenshots/market_dark.png" width="320"/>
+<img src="assets/screenshots/portfolio_light.png" width="320"/>
+<img src="assets/screenshots/details_chart.png" width="320"/>
+<img src="assets/screenshots/settings.png" width="320"/>
 
 ## Getting Started
 
 ### Prerequisites
 
-- Flutter 2.10.0 or higher
-- Dart 2.16.0 or higher
+- Flutter SDK (>=3.0.0 recommended)
+- Dart (Compatible with your Flutter version)
+- Android Studio, VSCode, or other IDE
 
 ### Installation
 
-1. Clone the repository
-```bash
-git clone https://github.com/yourusername/cryptoglide.git
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/Manshi2921/CryptoGlide.git
+   cd CryptoGlide
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   flutter pub get
+   ```
+
+3. **Run the app:**
+   ```bash
+   flutter run
+   ```
+
+### Directory Structure
+
+```
+lib/
+  features/
+    crypto/           # Market tracker & details
+    Portfolio/        # Portfolio screen
+    Settings /        # Settings screen
+  providers/          # State management (Provider)
+  services/           # API/WebSocket services
+  Widgets/            # Reusable widgets (e.g., bottom nav bar)
+  main.dart           # App entry point
+assets/
+  icons/              # Crypto icons (png)
+  screenshots/        # App screenshots
 ```
 
-2. Navigate to project directory
-```bash
-cd cryptoglide
-```
+## Main Packages Used
 
-3. Install dependencies
-```bash
-flutter pub get
-```
+- [provider](https://pub.dev/packages/provider) — State management
+- [fl_chart](https://pub.dev/packages/fl_chart) — Animated charts
+- [web_socket_channel](https://pub.dev/packages/web_socket_channel) — Real-time data from Binance
+- [http](https://pub.dev/packages/http) — REST API for CoinGecko
+- [google_fonts](https://pub.dev/packages/google_fonts) — Custom fonts
+- [shimmer](https://pub.dev/packages/shimmer) — Loading animations
 
-4. Run the app
-```bash
-flutter run
-```
+## Customization
 
-## Implementation Details
+- **Add new coins:**  
+  Edit `cryptos` and `cryptoNames` in `CryptoProvider` or `PortfolioProvider`.
+- **Add icons:**  
+  Place PNG icon in `assets/icons/` named as `<SYMBOL>.png` (e.g., `BTCUSDT.png`) and update `pubspec.yaml`.
+- **Change theme colors:**  
+  Edit color values in widgets or override theme in `main.dart`.
 
-### WebSocket Connection
+## API & Data Sources
 
-The app connects to Binance's WebSocket API to receive real-time price updates:
+- [Binance WebSocket API](https://binance-docs.github.io/apidocs/spot/en/#websocket-market-streams)
+- [CoinGecko API](https://www.coingecko.com/en/api/documentation)
 
-```dart
-String wsSymbol = cryptoSymbol.toLowerCase();
-_channel = IOWebSocketChannel.connect('wss://stream.binance.com:9443/ws/${wsSymbol}usdt@trade');
-```
+## Contributing
 
-### Chart Data
-
-Chart data is fetched from CoinGecko API with customizable time periods:
-
-```dart
-String url = "https://api.coingecko.com/api/v3/coins/$cryptoId/market_chart?vs_currency=usd&days=$interval";
-```
-
-### State Management
-
-The app uses Provider for state management:
-
-```dart
-return MultiProvider(
-  providers: [
-    ChangeNotifierProvider(create: (_) => CryptoProvider()),
-    ChangeNotifierProvider(create: (_) => PortfolioProvider()),
-  ],
-  child: const CryptoApp(),
-);
-```
-
-## Libraries Used
-
-- **provider**: For state management
-- **http**: For API requests
-- **web_socket_channel**: For WebSocket connections
-- **fl_chart**: For interactive charts
-- **google_fonts**: For typography
-- **shimmer**: For loading animations
-
-## Future Improvements
-
-- Price alerts and push notifications
-- User authentication and cloud sync
-- More detailed technical analysis tools
-- Additional cryptocurrencies and custom watchlists
-- News integration
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 
-[Your License Here]
+[MIT](LICENSE)
 
-## Acknowledgments
+---
 
-- [Binance API](https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams) for real-time data
-- [CoinGecko API](https://www.coingecko.com/en/api) for cryptocurrency information
+## About
+
+Maintained by [Garv](https://github.com/garvsharmxa)  
+For any questions or feature requests, open a GitHub issue or contact me.
